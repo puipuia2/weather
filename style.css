@@ -1,50 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    margin: -1px;
+    padding: 1px;
+overflow-x: clip;}
 
 body{
+    
     background-color: rgba(81, 95, 116, 0.8);
     font-family: 'Poppins', sans-serif;
+    margin: 0%;
 }
 
-.container{
+.cont{
     padding: 20px 70px;
     color: white;
 }
+::placeholder {color: #d7d7d7;}
+
 .current-info{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
-.date-container{
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {text-transform: capitalize;}
+
+.date-cont{
     font-weight: 100;
-}
-.date-container .time{
-    font-size: 70px;
+display: flex;flex-direction: column;width: 278px;}
+.date-cont .time{
+    font-size: 55px;
     font-weight: 100;
 }
 
-.date-container #am-pm{
+.others .weather-item .temp1{
+    font-weight: 300;
+
+font-size: 20px;display: contents;justify-content: space-between;}
+.Description {font-weight: 200;}
+
+.date-cont #am-pm{
     font-size: 30px;
     margin-left: 20px;
 }
 
-.date-container .date{
+.date-cont .date{
     font-size: 30px;
 }
 
-.place-container{
+.place-cont{
 text-align: end;
+
 }
 
-.place-container .time-zone{
+.place-cont .city{
     font-size: 30px;
     font-weight: 100;
 }
-.place-container .country{
+
+.search{
+    display: flex;
+    align-items: right;
+    justify-content: center;
+}
+
+
+.place-cont .country{
     font-size: 12px;
     font-weight: 700;
 }
@@ -62,7 +89,7 @@ text-align: end;
 .current-info .others .weather-item{
     display: flex;
     justify-content: space-between;
-}
+font-weight: 200;}
 
 .future-forecast{
     background: rgba(49, 49, 49, 0.8);
@@ -72,20 +99,43 @@ text-align: end;
     display: flex;
     color: white;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     
 }
 .future-forecast .today{
-    display: flex;
-    align-items: center;
+    
+    
     justify-content: center;
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 12px;
     background: rgba(0, 0, 0, 0.2);
+display: flex;align-items: center;}
+button {
+    margin-left: 0.5em;border-radius: 20%;
+    border: none;
+    height: 30px;
+    outline: none;
+    width: 30px;
+    background: #48484a;
+    color: rgb(242 242 241);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    border-radius: 8px;
+    background-color: #48484a;
+    color: #eeeeee;
+    font-family: inherit;
+    height: 30px;
+}
+
+button:hover {background: #f2f2f1;color: #eb6e4b;}
 .future-forecast .today .day{
     padding: 5px 20px;
     background: #3c3c44;
@@ -93,8 +143,10 @@ text-align: end;
     text-align: center;
 }
 
+
+
 .future-forecast .today .temp{
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 15px;
 }
 
@@ -124,48 +176,44 @@ text-align: end;
     font-weight: 100;
 }
 
-@media only screen and (max-width:730px){
-    .container{
-        padding: 20px;
+@media only screen and (max-width:770px){
+    .cont{
+        padding: 1px;  
     }
     
-
     .future-forecast{
         justify-content: start;
         align-items: none;
         overflow-y: scroll;
-
     }
     .future-forecast .today .temp {
-        font-size: 23px;
-    }
-    .date-container .time{
-        font-size: 50px;
-    }
-
-    .date-container #am-pm{
         font-size: 20px;
     }
-
-    .date-container .date {
+  
+    /* .date-cont .date {
         font-size: 20px;
-    }
-    .place-container{
+    } */
+
+    .place-cont{
         text-align: end;
         margin-top: 15px;
     }
-    .place-container .time-zone{
-        font-size: 20px;
+    .place-cont .city{
+        font-size: 30px;
     }
     .current-info .others{
         padding: 12px;
     }
     .current-info .others .weather-item{
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 1600px){
+    .cont{
+        padding: 20px 70px;
+        color: white;
+    }
     .future-forecast{
         justify-content: start;
         align-items: none;
